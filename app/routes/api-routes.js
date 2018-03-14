@@ -14,10 +14,10 @@ module.exports = (app) => {
 	});
 
 	//adding sequelize code to get specific item and return it as JSON
-	app.get('/api/:id', function(req, res) {
+	app.get('/api/:name', function(req, res) {
 		Product.findAll({
 			where: {
-				id: req.params.id
+				id: req.params.name
 			}
 		}).then(function(result) {
 			res.json(result);
@@ -25,15 +25,15 @@ module.exports = (app) => {
 	});
 
 	//adding sequelize code to get items from specific product_kind and return it as JSON
-	app.get('/api/:product_kind', function(req, res) {
-		Product.findAll({
-			where: {
-				id: req.params.id
-			}
-		}).then(function(result) {
-			res.json(result);
-		});
-	});
+	// app.get('/api/:product_kind', function(req, res) {
+	// 	Product.findAll({
+	// 		where: {
+	// 			id: req.params.id
+	// 		}
+	// 	}).then(function(result) {
+	// 		res.json(result);
+	// 	});
+	// });
 
 	// Add sequelize code to create a product
 	app.post("/api/new", function(req, res) {
