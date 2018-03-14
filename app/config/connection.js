@@ -5,6 +5,7 @@ const Sequelize = require('sequelize');
 const sequelize = new Sequelize('hybc', 'root', 'root', {
 	host: 'localhost',
 	dialect: 'mysql',
+	port: 3306,
 	pool: {
 		max: 5,
 		min: 0,

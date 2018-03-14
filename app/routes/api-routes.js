@@ -15,9 +15,9 @@ module.exports = (app) => {
 
 	//adding sequelize code to get specific item and return it as JSON
 	app.get('/api/:name', function(req, res) {
-		Product.findAll({
+		Product.findOne({
 			where: {
-				id: req.params.name
+				product_name: req.params.name
 			}
 		}).then(function(result) {
 			res.json(result);
