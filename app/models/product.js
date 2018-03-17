@@ -6,7 +6,7 @@ const sequelize = require('../config/connection.js');
 //Creates a 'Product' model that matches up with DB
 const Product = sequelize.define('product', {
 
-	routeName: {
+	route_name: {
 		type: Sequelize.STRING
 	},
 	product_name: {
@@ -15,7 +15,7 @@ const Product = sequelize.define('product', {
 	product_kind: {
 		type: Sequelize.STRING
 	},
-	department_name: {
+	images: {
 		type: Sequelize.STRING
 	},
 	price: {

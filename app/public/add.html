@@ -43,8 +43,8 @@
 									<input type="text" class="form-control" id="kind" placeholder="">
 								</div>
 								<div class="form-group">
-									<label for="">Department Name</label>
-									<input type="text" class="form-control" id="department" placeholder="">
+									<label for="">Image URL</label>
+									<input type="text" class="form-control" id="image" placeholder="">
 								</div>
 								<div class="form-group">
 									<label for="">Price</label>
@@ -79,7 +79,7 @@
 	  var newProduct = {
 	    product_name: $("#name").val().trim(),
 	    product_kind: $("#kind").val().trim(),
-	    department_name: $("#department").val().trim(),
+	    image: $("#image").val().trim(),
 	    price: $("#price").val().trim(),
 	    stock_quantity: $("#stock").val().trim()
 	  };
@@ -95,7 +95,7 @@
 	  // Empty each input box by replacing the value with an empty string
 	  $("#name").val("");
 	  $("#kind").val("");
-	  $("#department").val("");
+	  $("#image").val("");
 	  $("#price").val("");
 	  $("#stock").val("");
 

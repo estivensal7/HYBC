@@ -63,7 +63,7 @@
 		    // Now  we add our product data to the well we just placed on the page
 		    $("#product-well-" + i).append("<h2>" + (i + 1) + ". " + data[i].product_name + "</h2>");
 		    $("#product-well-" + i).append("<h3>Product Kind: " + data[i].product_kind + "</h4>");
-		    $("#product-well-" + i).append("<h3>Department: " + data[i].department_name + "</h4>");
+		    $("#product-well-" + i).append('<img src="' + data[i].images + '" />');
 		    $("#product-well-" + i).append("<h3>Price: " + data[i].price + "</h4>");
 		    $("#product-well-" + i).append("<h3>Stock Quantity: " + data[i].stock_quantity + "</h4>");
 		  }

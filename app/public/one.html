@@ -90,17 +90,20 @@
 		      $("#well-section").append("<h2> Sorry! No results found. </h2>");
 		    }
 		    else {
-		      // otherwise
-		      // append the product name
-		      $("#well-section").append("<h2>" + data.product_name + "</h2>");
-		      // the product kimd
-		      $("#well-section").append("<h3>Kind: " + data.product_kind + "</h3>");
-		      // the department name
-		      $("#well-section").append("<h3>Department: " + data.department_name + "</h3>");
-		      // the price
-		      $("#well-section").append("<h3>Price: " + data.price + "</h3>");
-		      // and the stock quantity
-		      $("#well-section").append("<h3>Stock Quantity: " + data.stock_quantity + "</h3>");
+
+		    	for(let i = 0; i < data.length; i++) {	
+			      // otherwise
+			      // append the product name
+			      $("#well-section").append("<h2>" + data[i].product_name + "</h2>");
+			      // the product kimd
+			      $("#well-section").append("<h3>Kind: " + data[i].product_kind + "</h3>");
+			      // the image
+			      $("#well-section").append('<img src="' + data[i].images + '" />');
+			      // the price
+			      $("#well-section").append("<h3>Price: " + data[i].price + "</h3>");
+			      // and the stock quantity
+			      $("#well-section").append("<h3>Stock Quantity: " + data[i].stock_quantity + "</h3>");
+		    	}
 		    }
 		  });
 		});
