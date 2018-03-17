@@ -24,17 +24,6 @@ module.exports = (app) => {
 		});
 	});
 
-	//adding sequelize code to get items from specific product_kind and return it as JSON
-	// app.get('/api/:product_kind', function(req, res) {
-	// 	Product.findAll({
-	// 		where: {
-	// 			id: req.params.id
-	// 		}
-	// 	}).then(function(result) {
-	// 		res.json(result);
-	// 	});
-	// });
-
 	// Add sequelize code to create a product
 	app.post("/api/new", function(req, res) {
 	Product.create({
