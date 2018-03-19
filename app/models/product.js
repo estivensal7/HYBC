@@ -15,6 +15,9 @@ const Product = sequelize.define('product', {
 	product_kind: {
 		type: Sequelize.STRING
 	},
+	gender: {
+		type: Sequelize.STRING
+	},
 	images: {
 		type: Sequelize.STRING
 	},

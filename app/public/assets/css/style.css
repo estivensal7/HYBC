@@ -3,7 +3,7 @@ html {
 }
 body {
 	background-color: white;
-	background-image: url("../images/connect.png");
+	background-image: url("../../js/images/connect.png");
     margin: 0 auto;
     margin-left: 5%;
     position: fixed;
@@ -47,10 +47,10 @@ body {
 	line-height: 2;
     text-align: center;
 }
-.links {
+/*.links {
 	position: relative;
     top: 60px;
-}
+}*/
 #link1 {
 	padding-right: 20px;
 font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
@@ -327,3 +327,5 @@ p {
     top: 640px;
     width: 475px;
 }
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

@@ -24,11 +24,23 @@ module.exports = (app) => {
 		});
 	});
 
+	app.get('/api/:gender', function(req, res) {
+		Product.findAll({
+			where: {
+				gender: req.params.gender
+			}
+		}).then(function(result) {
+			res.json(result);
+		});
+	});
+
 	// Add sequelize code to create a product
 	app.post("/api/new", function(req, res) {
 	Product.create({
 	  product_name: req.body.product_name,
+	  route_name: req.body.route_name,
 	  product_kind: req.body.product_kind,
+	  gender: req.body.gender,
 	  images: req.body.images,
 	  price: req.body.price,
 	  stock_quantity: req.body.stock_quantity
