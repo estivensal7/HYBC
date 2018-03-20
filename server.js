@@ -16,7 +16,7 @@ app.use(bodyParse.urlencoded({ extended: true }));
 app.use(bodyParse.json());
 
 //Static directory
-app.use('app/public');
+app.use(express.static('app/public'));
 
 //Routes
 // =======================================================
