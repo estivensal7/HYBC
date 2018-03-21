@@ -59,38 +59,48 @@
 	<hr id="header_hr" />
 
 	<div class="body">
-			<div class="bodyPart2">
-			
-			<div class="bodyPart2-1">
-				<div id="bodyPart2-1-1">
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title"><strong>Checkout</strong></h3>
-						</div>
-						<div class="panel-body">
-							<form action="" method="POST" role="form">
-								<div class="form-group">
-									<label for="">Name</label>
-									<input type="text" class="form-control" id="name" placeholder="">
-								</div>
-								<div class="form-group">
-									<label for="">Email</label>
-									<input type="email" class="form-control" id="email" placeholder="example@email.com">
-								</div>
-								<div class="form-group">
-  									<label for="message">Message:</label>
-  									<textarea class="form-control" rows="2" id="message"></textarea>
-								</div>
-							</form>
-							<br>
-							<div class="text-right">
-								<button type="submit" class="btn btn-info btn-md" id="add-btn"><span class="glyphicon glyphicon-ok"></span>Send Message</button>
-							</div>	
-						</div>
-					</div>
-				</div>
-			</div>			
-			</div>			
-	</div>
+		<div class="row">
+			<h2 class="billing-adress-header">Billing Address</h2>
+
+			<h2 class="cart-header">Your Cart</h2>
+		</div>
+			<form>
+			  <div class="form-row">
+			    <div class="col-md-4 mb-6">
+			      <label for="">First name</label>
+			      <input type="text" class="form-control" id="validationServer01" placeholder="First name" required>
+			    </div>
+			    <div class="col-md-4 mb-6">
+			      <label for="validationServer02">Last name</label>
+			      <input type="text" class="form-control" id="validationServer02" placeholder="Last name" value="Otto" required>
+			    </div>
+			  	<div class="form-row">
+			    	<div class="col-md-6 mb-3">
+				      <label for="validationServer03">City</label>
+				      <input type="text" class="form-control is-invalid" id="validationServer03" placeholder="City" required>
+				      <div class="invalid-feedback">
+				        Please provide a valid city.
+			    	</div>
+			    </div>
+			    <div class="col-md-3 mb-3">
+			      <label for="validationServer04">State</label>
+			      <input type="text" class="form-control is-invalid" id="validationServer04" placeholder="State" required>
+			      <div class="invalid-feedback">
+			        Please provide a valid state.
+			      </div>
+			    </div>
+			    <div class="col-md-3 mb-3">
+			      <label for="validationServer05">Zip</label>
+			      <input type="text" class="form-control is-invalid" id="validationServer05" placeholder="Zip" required>
+			      <div class="invalid-feedback">
+			        Please provide a valid zip.
+			      </div>
+			    </div>
+			  </div>
+			  
+			  <button class="btn btn-primary" type="submit">Submit form</button>
+		</div>
+	</form>
+</div>
 </body>
 </html>
