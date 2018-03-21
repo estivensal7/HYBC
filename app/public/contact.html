@@ -57,36 +57,40 @@
 		</nav>
 
 	<hr id="header_hr" />
-		
+
 	<div class="body">
 			<div class="bodyPart2">
 			
 			<div class="bodyPart2-1">
 				<div id="bodyPart2-1-1">
-					<h2 class="h2class">Contact Us</h2>
-					<hr />
-
-					<div class="bodyPart2-1-2">
-						<br>Name</br>
-						<input type="name" name="John Smith" id="nameBox">
-						<br>Email</br>
-						<input type="Email" name="Example@yourdomain.com" id="emailBox">
-						<br>Message</br>
-						<input type="Message" name="" id="messageBox">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title"><strong>Contact Us</strong></h3>
+						</div>
+						<div class="panel-body">
+							<form action="" method="POST" role="form">
+								<div class="form-group">
+									<label for="">Name</label>
+									<input type="text" class="form-control" id="name" placeholder="">
+								</div>
+								<div class="form-group">
+									<label for="">Email</label>
+									<input type="email" class="form-control" id="email" placeholder="example@email.com">
+								</div>
+								<div class="form-group">
+  									<label for="message">Message:</label>
+  									<textarea class="form-control" rows="2" id="message"></textarea>
+								</div>
+							</form>
+							<br>
+							<div class="text-right">
+								<button type="submit" class="btn btn-info btn-md" id="add-btn"><span class="glyphicon glyphicon-ok"></span>Send Message</button>
+							</div>	
+						</div>
 					</div>
-					<button id="submitBtn">Submit</button>
 				</div>
-			</div>
-		
-			<div class="bodyPart2-2">
-				<h3 id="h2-2">Connect with HYBC</h3>
-				<hr />
-				<a href="https://geerooniimoo.github.io/Basic-Porfolio/" id="GitHub" /><img src="assets/images/GitHub.png">
-				<a href="https://www.linkedin.com/in/geronimo-perez-27687061/" id="LinkedIn"><img src="assets/images/LinkedIn.png"></a>
-				<a href="https://stackoverflow.com/users/8864857/geronimo-perez" id="StackFlow"><img src="assets/images/StackFlow.png"></a>
-			</div>
-		</div>
+			</div>			
+			</div>			
 	</div>
-	
 </body>
 </html>
