@@ -41,4 +41,8 @@ module.exports = function(app) {
   app.get("/search", function(req, res) {
     res.sendFile(path.join(__dirname, '../public/one.html'));
   });
+
+  app.get("/checkout", function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/checkout.html'));
+  });
 }

@@ -6,10 +6,10 @@ body {
 	background-image: url("../../js/images/connect.png");
     margin: 0 auto;
     margin-left: 5%;
-    position: fixed;
     min-height: 100%;
     padding-bottom: 50px;
     width: 90%;
+    overflow: visible;
 }
 
 .body {
