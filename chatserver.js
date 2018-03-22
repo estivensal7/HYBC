@@ -7,7 +7,10 @@ var app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-setting up app 
+// handlebars
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+// setting up app 
 const PORT = 7000;
 
 
@@ -38,9 +41,31 @@ var server = app.listen (PORT,function(){
     });
 });
 
-static file
-app.use(express.static('./public/'));
+// static file
+// app.use(express.static('/app/views/index.handlebars'));
 
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "/public/chat.html"));
+// app.get("/", function(req, res) {
+//   res.sendFile(path.join(__dirname, "/app/views/index.handlebars"));
+// });
+
+// Routes
+app.get("/",function(req,res){
+    res.render("index")
 });
+
+// app.get("/home",function(req,res){
+//     res.render("index")
+// });
+
+// app.get("/home",function(req,res){
+//     res.render("index")
+// });
+
+// app.get("/home",function(req,res){
+//     res.render("index")
+// });
+
+// app.get("/home",function(req,res){
+//     res.render("index")
+// });
+
