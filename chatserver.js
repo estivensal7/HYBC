@@ -7,8 +7,8 @@ var app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-//setting up app 
-// const PORT = 3000;
+setting up app 
+const PORT = 7000;
 
 
 
@@ -38,9 +38,9 @@ var server = app.listen (PORT,function(){
     });
 });
 
-//static file
-// app.use(express.static('./public/'));
+static file
+app.use(express.static('./public/'));
 
-// app.get("/", function(req, res) {
-//   res.sendFile(path.join(__dirname, "/public/chat.html"));
-// });
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "/public/chat.html"));
+});
