@@ -15,32 +15,33 @@ module.exports = (app) => {
 
 	//adding sequelize code to get specific item and return it as JSON
 	app.get('/api/:name', function(req, res) {
-		Product.findOne({
+		Product.findAll({
 			where: {
-				product_name: req.params.name
+				route_name: req.params.name
 			}
 		}).then(function(result) {
 			res.json(result);
 		});
 	});
 
-	//adding sequelize code to get items from specific product_kind and return it as JSON
-	// app.get('/api/:product_kind', function(req, res) {
-	// 	Product.findAll({
-	// 		where: {
-	// 			id: req.params.id
-	// 		}
-	// 	}).then(function(result) {
-	// 		res.json(result);
-	// 	});
-	// });
+	app.get('/api/:gender', function(req, res) {
+		Product.findAll({
+			where: {
+				gender: req.params.gender
+			}
+		}).then(function(result) {
+			res.json(result);
+		});
+	});
 
 	// Add sequelize code to create a product
 	app.post("/api/new", function(req, res) {
 	Product.create({
 	  product_name: req.body.product_name,
+	  route_name: req.body.route_name,
 	  product_kind: req.body.product_kind,
-	  department_name: req.body.department_name,
+	  gender: req.body.gender,
+	  images: req.body.images,
 	  price: req.body.price,
 	  stock_quantity: req.body.stock_quantity
 	})
