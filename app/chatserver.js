@@ -1,3 +1,4 @@
+
 const express = require('express');
 const socket = require('socket.io');
 const bodyParser = require('body-parser');
@@ -53,24 +54,39 @@ var server1 = server.listen (PORT,function(){
 
 // Routes
 app.get("/",function(req,res){
+    res.render("index")
+});
+
+app.get("/add",function(req,res){
     res.render("add")
 });
 
-// app.get("/home",function(req,res){
-//     res.render("index")
-// });
+app.get("/checkout",function(req,res){
+    res.render("checkout")
+});
 
-// app.get("/home",function(req,res){
-//     res.render("index")
-// });
+app.get("/contact",function(req,res){
+    res.render("contact")
+});
 
-// app.get("/home",function(req,res){
-//     res.render("index")
-// });
 
-// app.get("/home",function(req,res){
-//     res.render("index")
-// });
+app.get("/one",function(req,res){
+    res.render("one")
+});
+
+app.get("/porfolio",function(req,res){
+    res.render("portfolio")
+});
+
+app.get("/mens",function(req,res){
+    res.render("mens")
+});
+
+app.get("/womens",function(req,res){
+    res.render("womens")
+});
+
+
 
 app.listen(PORT2, function(){
     console.log("listening on port 3001")
