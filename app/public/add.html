@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script
+  	src="https://code.jquery.com/jquery-3.3.1.min.js"
+  	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  	crossorigin="anonymous"></script>
+
+
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<title>HYBC</title>
+</head>
+<body>
+		
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <a class="navbar-brand" href="/">HYBC LLC</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item active">
+		        <a class="nav-link" href="/contact-us">Contact Us</a>
+		      </li>
+		      <li class="nav-item dropdown active">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Products
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="/all">All Products</a>
+		          <div class="dropdown-divider"></div>
+		          <a class="dropdown-item" href="/mens">Men's T-Shirts</a>
+		          <div class="dropdown-divider"></div>
+		          <a class="dropdown-item" href="/womens">Women's T-Shirts</a>
+		          <div class="dropdown-divider"></div>
+		          <a class="dropdown-item" href="search">Search Products</a>
+		        </div>
+		      </li>
+		    </ul>
+			<!-- cart symbol here -->
+		  </div>
+		</nav>
+
+		<div class="row" id="new-form-body">
+
+			<div class="panel-body">
+				<form action="" method="POST" role="form">
+					<div class="form-group">
+						<label for="">Name</label>
+						<input type="text" class="form-control" id="name" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="">Route Name</label>
+						<input type="text" class="form-control" id="route-name" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="">Product Kind</label>
+						<input type="text" class="form-control" id="kind" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="">Gender</label>
+						<input type="text" class="form-control" id="gender" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="">Image</label>
+						<input type="text" class="form-control" id="image" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="">Price</label>
+						<input type="number" class="form-control" id="price" placeholder="">
+					</div>
+					<div class="form-group">
+						<label for="">Stock Quantity</label>
+						<input type="number" class="form-control" id="stock" placeholder="">
+					</div>
+				</form>
+				<br>
+				<div class="text-right">
+					<button type="submit" class="btn btn-dark btn-md" id="add-btn"><span class="glyphicon glyphicon-ok"></span> Add New Product</button>
+				</div>
+			</div>
+		</div>
+			
+
+
+
+
+	<!-- Custom Script -->
+	<script type="text/javascript">
+		// The code in add.js handles what happens when the user clicks the "Add A New Product" button.
+
+	// When user clicks add-btn
+	$("#add-btn").on("click", function(event) {
+	  event.preventDefault();
+
+	  // Make a Product object
+	  var newProduct = {
+	    product_name: $("#name").val().trim(),
+	    route_name: $("#route-name").val().trim(),
+	    product_kind: $("#kind").val().trim(),
+	    gender: $("#gender").val().trim(),
+	    image: $("#image").val().trim(),
+	    price: $("#price").val().trim(),
+	    stock_quantity: $("#stock").val().trim()
+	  };
+
+	  // Send an AJAX POST-request with jQuery
+	  $.post("/api/new", newProduct)
+	    // On success, run the following code
+	    .then(function(data) {
+	      // Log the data we found
+	      console.log(data);
+	    });
+
+	  // Empty each input box by replacing the value with an empty string
+	  $("#name").val("");
+	  $("#route-name").val("");
+	  $("#kind").val("");
+	  $("#gender").val("");
+	  $("#image").val("");
+	  $("#price").val("");
+	  $("#stock").val("");
+
+	});
+	</script>
+	</body>
+</html>
