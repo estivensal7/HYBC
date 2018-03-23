@@ -1,51 +1,83 @@
 		
-		<div class="header">
-				<h1 id="CompanyName">HYBC LLC.</h1>
-		
-			<div class="links">	
-				<a href="index.html" id="link1">About</a>
-				<a href="portfolio.html" id="link2">Portfolio</a>
-				<a href="contact.html" id="link3">Contact</a>
-			</div>
-		</div>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <a class="navbar-brand" href="/">HYBC LLC</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item active">
+		        <a class="nav-link" href="/contact-us">Contact Us</a>
+		      </li>
+		      <li class="nav-item dropdown active">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Products
+		        </a>
+		        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="/all">All Products</a>
+		          <div class="dropdown-divider"></div>
+		          <a class="dropdown-item" href="/mens">Men's T-Shirts</a>
+		          <div class="dropdown-divider"></div>
+		          <a class="dropdown-item" href="/womens">Women's T-Shirts</a>
+		          <div class="dropdown-divider"></div>
+		          <a class="dropdown-item" href="search">Search Products</a>
+		        </div>
+		      </li>
+		    </ul>
+			<a href="/checkout" class="btn btn-danger">
+  				<i class="fas fa-shopping-cart"> 0</i>
+			</a>
+		  </div>
+		</nav>
 
 		<hr id="header_hr" />
-			
-		</div>
 		
 	<div class="body">
 			<div class="bodyPart2">
 			
 			<div class="bodyPart2-1">
 				<div id="bodyPart2-1-1">
-					<h2 class="h2class">Contacts</h2>
-					<hr />
-
-					<div class="bodyPart2-1-2">
-						<br>Name</br>
-						<input type="name" name="John Smith" id="nameBox">
-						<br>Email</br>
-						<input type="Email" name="Example@yourdomain.com" id="emailBox">
-						<br>Message</br>
-						<input type="Message" name="" id="messageBox">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title"><strong>Contact Us</strong></h3>
+						</div>
+						<div class="panel-body">
+							<div class="form-row">
+							    <div class="col-md-6 mb-3">
+							      <label for="validationDefault01">First Name</label>
+							      <input type="text" class="form-control" id="validationDefault01 first-name" placeholder="First name" value="" required>
+							    </div>
+							    <div class="col-md-6 mb-3">
+							      <label for="validationDefault02">Last Name</label>
+							      <input type="text" class="form-control" id="validationDefault02 last-name" placeholder="Last name" value="" required>
+							    </div>
+							  </div>
+							  <div class="form-row">
+							    <div class="form-group col-md-12">
+							      <label for="inputEmail4">Email</label>
+							      <input type="email" class="form-control" id="inputEmail4 email" placeholder="hybc@example.com" required>
+							    </div>
+							  </div>
+							  <div class="form-group">
+							    <label for="exampleFormControlTextarea1">Message</label>
+							    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+							  </div>
+							  <button class="btn btn-primary" type="contact-submit">Tell us how you really feel!</button>
+							</form>
+						</div>
 					</div>
-						<button id="submitBtn">Submit</button>
 				</div>
-			
-				
-			</div>
-		
-			<div class="bodyPart2-2">
-				<h3 id="h2-2">Connect with HYBC</h3>
-				<hr />
-				<a href="https://geerooniimoo.github.io/Basic-Porfolio/" id="GitHub" /><img src="assets/images/GitHub.png">
-				<a href="https://www.linkedin.com/in/geronimo-perez-27687061/" id="LinkedIn"><img src="assets/images/LinkedIn.png"></a>
-				<a href="https://stackoverflow.com/users/8864857/geronimo-perez" id="StackFlow"><img src="assets/images/StackFlow.png"></a>
-			</div>
-		</div>
+			</div>			
+				</div>
 
-		<div class="footer">
-			<hr id="footer_hr" />
-			<h5>Copyright 2016 Hope You Buy Cheap LLC.</h5>
-		</div>
-	</div>
+				<div>
+
+					<div class="panel-body" id="well-section">
+						<!-- Content will go in here -->
+					</div>
+				</div>
+			</div>
