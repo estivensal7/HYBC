@@ -70,11 +70,11 @@ app.get("/contact",function(req,res){
 });
 
 
-app.get("/one",function(req,res){
+app.get("/search",function(req,res){
     res.render("one")
 });
 
-app.get("/porfolio",function(req,res){
+app.get("/all",function(req,res){
     res.render("portfolio")
 });
 
