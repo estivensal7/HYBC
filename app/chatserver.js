@@ -1,4 +1,3 @@
-
 const express = require('express');
 const socket = require('socket.io');
 const bodyParser = require('body-parser');
@@ -52,42 +51,14 @@ app.use(express.static('public'));
 //   res.sendFile(path.join(__dirname, "/app/views/index.handlebars"));
 // });
 
-// Routes
-app.get("/",function(req,res){
-    res.render("index")
-});
-
-app.get("/add",function(req,res){
-    res.render("add")
-});
-
-app.get("/checkout",function(req,res){
-    res.render("checkout")
-});
-
-app.get("/contact",function(req,res){
-    res.render("contact")
-});
+//Routes
+// =======================================================
+require('./routes/api-routes.js')(app);
+require('./routes/html-routes.js')(app);
 
 
-app.get("/search",function(req,res){
-    res.render("one")
-});
-
-app.get("/all",function(req,res){
-    res.render("portfolio")
-});
-
-app.get("/mens",function(req,res){
-    res.render("mens")
-});
-
-app.get("/womens",function(req,res){
-    res.render("womens")
-});
-
-
-// calling
+//starts the server to begin listening
+// =======================================================
 app.listen(PORT2, function(){
     console.log("listening on port 3001")
 });

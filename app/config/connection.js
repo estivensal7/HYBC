@@ -10,6 +10,7 @@ const sequelize = new Sequelize('hybc', 'root', 'root', {
 		max: 5,
 		min: 0,
 		idle: 12000
+
 	}
 });
 
