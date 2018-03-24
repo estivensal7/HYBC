@@ -22,7 +22,7 @@ const Product = sequelize.define('product', {
 		type: Sequelize.STRING
 	},
 	price: {
-		type: Sequelize.DECIMAL
+		type: Sequelize.DECIMAL(4, 2)
 	},
 	stock_quantity: {
 		type: Sequelize.INTEGER

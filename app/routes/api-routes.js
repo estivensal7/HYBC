@@ -10,6 +10,7 @@ module.exports = (app) => {
 	app.get('/api/all', function(req, res) {
 		Product.findAll({}).then(function(result) {
 			res.json(result);
+			console.log(res);
 		});
 	});
 
