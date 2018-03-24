@@ -11,7 +11,7 @@
 		        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
 		      </li>
 		      <li class="nav-item active">
-		        <a class="nav-link" href="/contact">Contact Us</a>
+		        <a class="nav-link" href="/contact-us">Contact Us</a>
 		      </li>
 		      <li class="nav-item dropdown active">
 		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -28,9 +28,10 @@
 		        </div>
 		      </li>
 		    </ul>
-			<a href="/checkout" class="btn btn-danger">
-  				<i class="fas fa-shopping-cart"> 0</i>
-			</a>
+		    <form class="form-inline my-2 my-lg-0">
+		      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+		      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		    </form>
 		  </div>
 		</nav>
 
@@ -96,6 +97,34 @@
 		    	console.log(data);
 		    }
 		  });
+		});
+
+		// Make a get request to our api route that will return every product
+		$.get("/api/all", function(data) {
+			
+			  $(".bodyPart2-1").css("overflow", "auto")
+			  // For each book that our server sends us back
+			  for (var i = 0; i < data.length; i++) {
+					if (data[i].gender == "women") {
+					    // Create a parent div to hold product data
+					    var wellSection = $("<div>");
+					    // Add a class to this div: 'well'
+					    wellSection.addClass("well");
+					    // Add an id to the well to mark which well it is
+					    wellSection.attr("id", "product-well-" + i);
+					    wellSection.css("float", "left");
+					    wellSection.css("text-align", "center");
+					    wellSection.css("margin", "10px");
+					    // Append the well to the well section
+					    $(".bodyPart2-1").append(wellSection);
+
+					    // Now  we add our product data to the well we just placed on the page
+					    $("#product-well-" + i).append(`<img src=${data[i].images} width=150px height=150px />`);
+					    $("#product-well-" + i).append("<h4>" + data[i].product_name + "</h4>");
+					    $("#product-well-" + i).append("<h5>Price: $" + data[i].price + "</h5>");
+					    $("#product-well-" + i).append("<h5>Inventory: " + data[i].stock_quantity + "</h5>");
+				  	}
+				}
 		});
 
 
