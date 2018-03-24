@@ -50,7 +50,7 @@
 						<input type="text" id="product-search" class="form-control">
 						<br>
 						<div class="text-right">
-							<button type="submit" class="btn btn-primary btn-md" id="search-btn"><span class="glyphicon glyphicon-search"></span>Search</button>
+							<button type="submit" class="btn btn-primary btn-md" id="product-search-btn"><span class="glyphicon glyphicon-search"></span>Search</button>
 							
 						</div>
 					</div>
@@ -77,7 +77,7 @@
 		// URL parameter. Our server then performs the search to grab that product from the Database.
 
 		// when user hits the search-btn
-		$("#search-btn").on("click", function() {
+		$("#product-search-btn").on("click", function() {
 		  // save the product they typed into the product-search input
 		  var searchedProduct = $("#product-search")
 		    .val()
