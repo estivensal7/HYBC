@@ -1,4 +1,4 @@
-	
+		
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		  <a class="navbar-brand" href="/">HYBC LLC</a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,26 +35,68 @@
 		</nav>
 
 		<hr id="header_hr" />
-			
-		</div>
+
 		
 	<div class="body">
 			<div class="bodyPart2">
 			
 			<div class="bodyPart2-1">
 				<div id="bodyPart2-1-1">
-					<h2 class="h2class">About HYBC LLC.</h2>
-					<hr />
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title"><strong>Women's Products</strong></h3>
+						</div>
+						<div class="panel-body">
+							
+								
+						</div>
+					</div>
 				</div>
-			
-				<img src="assets/images/HYBC_Logo.jpg" id="bodyPart2-1-2" alt="HYBC Logo">
+			</div>			
+				</div>
 
-				<div class="bodyPart2-1-3">
-					<p>Hope You Buy Cheap LLC. was founded in November, 2016.  The mission of HYBC LLC. is to provide spiritual awareness though the use of American garments inspired by the Presidential agenda of America first.</p>
+				<div>
 
-					<p>The mission can be fulfilled by providing brief spiritual clues to complex social issues emprinted on 100% American garments followed by a more indepth explanation found on the company's website.</p>
-
-					<p>The HYBC Website provides a general discription of the company's mission and upbringing and a more specific description tailored to each message emprinted on the garments. The detailed description can be accessed by typing the model number of the garment purchased in the main page.  once this model number is confirmed, the client will have acces to a more interactive web page tailored to the product purchased.</p>
+					<div class="panel-body" id="well-section">
+						<!-- Content will go in here -->
+					</div>
 				</div>
 			</div>
-	</div>
+		</div>
+
+		
+	<!-- Custom Script -->
+	<script type="text/javascript">
+		
+		// Code here handles queries for specific products in the database
+		// In this case, the user submits a products name... we then pass that product's name as a
+		// URL parameter. Our server then performs the search to grab that product from the Database.
+
+		// when user hits the search-btn
+		$("#search-btn").on("click", function() {
+		  // save the product they typed into the product-search input
+		  var searchedProduct = $("#product-search")
+		    .val()
+		    .trim();
+
+		  // Using a RegEx Pattern to remove spaces from searchedCharacter
+		  searchedProduct = searchedProduct.replace(/\s+/g, "").toLowerCase();
+
+		  // we run an AJAX GET-request for our servers api,
+		  // including the user's product in the url
+		  $.get("/api/" + searchedProduct, function(data) {
+		    
+		    // empty to well-section before adding new content
+		    $("#well-section").empty();
+		    // if the data is not there, then return an error message
+		    if (!data) {
+		      $("#well-section").append("<h2> Sorry! No results found. </h2>");
+		    }
+		    else {
+		    	console.log(data);
+		    }
+		  });
+		});
+
+
+	</script>
