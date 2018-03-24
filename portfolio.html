@@ -1,82 +1,142 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>HYBC-Portfolio</title>
-</head>
-<body>
-		
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" type="text/css" href="app/public/assets/css/reset.css"> <!-- CSS reset -->
+		<link rel="stylesheet" type="text/css" href="app/public/assets/css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" type="text/css" href="app/public/assets/css/product-modal.css"> <!-- Modal style -->
+		<script src="app/public/js/modernizr.js"></script> <!-- Modernizr -->
+
+		<title>HYBC-Portfolio</title>
+	</head>
+	<body>
 		<div class="header">
-				<h1 id="CompanyName">HYBC LLC.</h1>
-		
+
+			<h1 id="CompanyName">HYBC LLC.</h1>
+
 			<div class="links">	
 				<a href="index.html" id="link1">About</a>
 				<a href="portfolio.html" id="link2">Portfolio</a>
 				<a href="contact.html" id="link3">Contact</a>
 			</div>
+
 		</div>
 
 		<hr id="header_hr" />
-			
-		</div>
-		
-	<div class="body">
-			<div class="bodyPart2">
-			
-			<div class="bodyPart2-1">
-				<div id="bodyPart2-1-1">
-					<h2 class="h2class">Portfolio</h2>
-					<hr />
-				</div>
-					
-					<div class="img1">
-						<a href="assets/images/EternalLifeWh.png"><img src="assets/images/EternalLifeWh.png" height="100px" width="100px"></a>
-						<h4 class="imgText">Eternal Life?</h4>
-					</div>	
-					
-					<div class="img1">
-						<a href="assets/images/EternalLifeBk.png"><img src="assets/images/EternalLifeBk.png" height="100px" width="100px"></a>
-						<h4 class="imgText">Eternal Life?</h4>
-					</div>
-
-					<div class="img1">
-						<a href="assets/images/GoodDoesNoEvilWh.png"><img src="assets/images/GoodDoesNoEvilWh1.png" height="100px" width="100px"></a>
-						<h4 class="imgText">Good Does No Evil</h4>
-					</div>
-
-					<div class="img1">
-						<a href="assets/images/GoodDoesNoEvilBk.png"><img src="assets/images/GoodDoesNoEvilBk1.png" height="100px" width="100px">
-						<h4 class="imgText">Good Does No Evil</h4></a>
-					</div>
-
-					<div class="img1">
-						<a href="assets/images/MenUpWh.png"><img src="assets/images/ManUpWh.png" height="100px" width="100px">
-						<h4 class="imgText">Man Up</h4></a>
-					</div>
-
-					<div class="img1">
-						<a href="assets/images/MenUpBk.png"><img src="assets/images/ManUpBk.png" height="100px" width="100px">
-						<h4 class="imgText">Man Up</h4></a>
-					</div>
-
 				
+			
+		<div class="body">
+			<div class="bodyPart2">
+				
+				<div class="bodyPart2-1">
+					<div id="bodyPart2-1-1">
+						<h2 class="h2class">Portfolio</h2>
+						<hr/>
+					</div>
+						
+					<ul class="cd-items cd-container">
+						<!-- <div class="img1"> -->
+						<li id="eternal" class="cd-item">
+							<!-- <a href="assets/images/EternalLifeWh.png"></a> -->
+							<img src="assets/images/EternalLifeBk.png" height="150px" width="150px" alt="Item Preview">
+							<a href="#0" class="cd-trigger">Quick View</a>
+							<!-- <h4 class="imgText">Eternal Life?</h4> -->
+						</li><!-- cd-item -->
+						<!-- </div> -->
+						<!-- <div class="img1"> -->
+
+						<li id="no-evil" class="cd-item">
+							<!-- <a href="assets/images/EternalLifeWh.png"></a> -->
+							<img src="assets/images/GoodDoesNoEvilWh-cropped.png" height="150px" width="150px" alt="Item Preview">
+							<a href="#0" class="cd-trigger">Quick View</a>
+							<!-- <h4 class="imgText">Eternal Life?</h4> -->
+						</li><!-- cd-item -->
+						<!-- </div> -->
+						<!-- <div class="img1"> -->
+
+						<li id="man-up" class="cd-item">
+							<!-- <a href="assets/images/EternalLifeWh.png"></a> -->
+							<img src="assets/images/ManUpWh.png" height="150px" width="150px" alt="Item Preview">
+							<a href="#0" class="cd-trigger">Quick View</a>
+							<!-- <h4 class="imgText">Eternal Life?</h4> -->
+						</li><!-- cd-item -->
+						<!-- </div> -->
+					</ul><!-- cd-items -->
+
+				</div>
+
+				<div class="cd-quick-view">
+					<div class="cd-slider-wrapper">
+						<ul class="cd-slider">
+							<li class="selected"><img src="assets/images/EternalLifeWh.png" alt="Product 1"></li>
+							<li><img src="assets/images/EternalLifeBk.png" alt="Product 2"></li>
+							<!-- <li><img src="img/item-3.jpg" alt="Product 3"></li> -->
+						</ul> <!-- cd-slider -->
+
+						<ul class="cd-slider-navigation">
+							<li><a class="cd-next" href="#0">Prev</a></li>
+							<li><a class="cd-prev" href="#0">Next</a></li>
+						</ul> <!-- cd-slider-navigation -->
+					</div> <!-- cd-slider-wrapper -->
+
+					<div class="cd-item-info">
+						<h2>Eternal Life</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, omnis illo iste ratione. Numquam eveniet quo, ullam itaque expedita impedit. Eveniet, asperiores amet iste repellendus similique reiciendis, maxime laborum praesentium.</p>
+
+						<ul class="cd-item-action">
+							<li><button class="add-to-cart">Add to cart</button></li>					
+							<li><a href="#0">Learn more</a></li>	
+						</ul> <!-- cd-item-action -->
+					</div> <!-- cd-item-info -->
+					<a href="#0" class="cd-close">Close</a>
+				</div><!-- cd-quick-view -->
+								
+<!-- 						<div class="img1">
+							<a href="assets/images/EternalLifeBk.png"><img src="assets/images/EternalLifeBk.png" height="100px" width="100px"></a>
+							<h4 class="imgText">Eternal Life?</h4>
+						</div>
+
+						<div class="img1">
+							<a href="assets/images/GoodDoesNoEvilWh.png"><img src="assets/images/GoodDoesNoEvilWh1.png" height="100px" width="100px"></a>
+							<h4 class="imgText">Good Does No Evil</h4>
+						</div>
+
+						<div class="img1">
+							<a href="assets/images/GoodDoesNoEvilBk.png"><img src="assets/images/GoodDoesNoEvilBk1.png" height="100px" width="100px">
+							<h4 class="imgText">Good Does No Evil</h4></a>
+						</div>
+
+						<div class="img1">
+							<a href="assets/images/MenUpWh.png"><img src="assets/images/ManUpWh.png" height="100px" width="100px">
+							<h4 class="imgText">Man Up</h4></a>
+						</div>
+
+						<div class="img1">
+							<a href="assets/images/MenUpBk.png"><img src="assets/images/ManUpBk.png" height="100px" width="100px">
+							<h4 class="imgText">Man Up</h4></a>
+						</div> -->
 			</div>
-		
-			<div class="bodyPart2-2">
-				<h3 id="h2-2">Connect with HYBC</h3>
-				<hr />
-				<a href="https://geerooniimoo.github.io/Basic-Porfolio/" id="GitHub" /><img src="assets/images/GitHub.png">
-				<a href="https://www.linkedin.com/in/geronimo-perez-27687061/" id="LinkedIn"><img src="assets/images/LinkedIn.png"></a>
-				<a href="https://stackoverflow.com/users/8864857/geronimo-perez" id="StackFlow"><img src="assets/images/StackFlow.png"></a>
-			</div>
+		</div>
+
+		<div class="bodyPart2-2">
+			<h3 id="h2-2">Connect with HYBC</h3>
+			<hr />
+			<a href="https://geerooniimoo.github.io/Basic-Porfolio/" id="GitHub"><img src="assets/images/GitHub.png"></a>
+			<a href="https://www.linkedin.com/in/geronimo-perez-27687061/" id="LinkedIn"><img src="assets/images/LinkedIn.png"></a>
+			<a href="https://stackoverflow.com/users/8864857/geronimo-perez" id="StackFlow"><img src="assets/images/StackFlow.png"></a>
 		</div>
 
 		<div class="footer">
-			<hr id="footer_hr" />
+			<hr id="footer_hr"/>
 			<h5>Copyright 2016 Hope You Buy Cheap LLC.</h5>
 		</div>
-	</div>
-</body>
+
+	<script src="js/jquery-2.1.1.js"></script>
+	<script src="js/velocity.min.js"></script>
+	<script src="js/main.js"></script> <!-- Resource jQuery -->
+	</body>
 </html>
